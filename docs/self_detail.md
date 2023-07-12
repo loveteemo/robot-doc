@@ -1,0 +1,52 @@
+# 获取联系人
+
+> 获取联系人列表
+
+## 请求参数
+
+| 参数         | 类型      | 描述           | 建议值      |
+|------------|---------|--------------|----------|
+| para	      | Object  | 数据包          |          |
+| > id       | 	String | 	请求时间戳，自行构造  |          |
+| > type     | 	Int    | 	根据请求接口进行变更  | 固定值 6550 |
+| > roomid   | 	String | 	群聊id，根据场景变换 | 空        |
+| > wxid     | 	String | 	微信id，根据场景变换 | 空        |
+| > content  | 	String | 	消息内容        | 空        |
+| > nickname | 	String | 	昵称          | 空        |
+| > ext      | 	String | 	扩展字段        | 空        |
+
+## 请求示例
+
+```json
+{
+  "para": {
+    "id": "1689039043",
+    "type": 6550,
+    "roomid": "",
+    "wxid": "",
+    "content": "",
+    "nickname": "",
+    "ext": ""
+  }
+}
+```
+
+## 返回示例
+
+```json
+{
+  "content": {
+    "big_headimg": "",
+    "cover": "",
+    "little_headimg": "",
+    "signature": ""
+  },
+  "id": "1689039043",
+  "receiver": "CLIENT",
+  "sender": "SERVER",
+  "srvid": 1,
+  "status": "SUCCSESSED",
+  "time": "2023-07-12 11:10:35",
+  "type": 6550
+}
+```
