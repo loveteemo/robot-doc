@@ -22,7 +22,7 @@
   "para": {
     "id": "1689039043",
     "type": 550,
-    "roomid": "21200044202@chatroom",
+    "roomid": "1111@chatroom",
     "wxid": "notify@all",
     "content": "hello",
     "nickname": "所有人",
