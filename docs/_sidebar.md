@@ -18,6 +18,7 @@
     - [0基础入口](async/empty.md)
     - [接受文本消息](async/receive_text.md)
     - [接受图片消息](async/receive_pic.md)
+    - [图片解密](async/decrypt_pic.md)
     - [接受@文本消息](async/receive_text_at.md)
     - [接受拉群消息](async/inviter_group.md)
   
