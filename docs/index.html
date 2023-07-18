@@ -1,35 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>微信机器人接口文档</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <style>
-    @media screen and (max-width: 767px) {
-      .sidebar-toggle {
-        bottom:auto !important;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>微信机器人接口文档</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <style>
+        @media screen and (max-width: 767px) {
+            .sidebar-toggle {
+                bottom: auto !important;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div id="app"></div>
-  <script>
+<div id="app"></div>
+<script>
     window.$docsify = {
-      name: '微信机器人接口文档',
-      repo: 'https://github.com/cixingguangming55555/wechat-bot',
-      loadSidebar: true,
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
-      }
+        name: '微信机器人接口文档',
+        repo: 'https://github.com/cixingguangming55555/wechat-bot',
+        loadSidebar: true,
+        alias: {
+            '/.*/_sidebar.md': '/_sidebar.md'
+        },
+        pagination: {
+            previousText: '上一章节',
+            // or
+            nextText: {
+                '/en/': 'NEXT',
+                '/': '下一章节'
+            },
+            crossChapter: true,
+            crossChapterText: true,
+        },
     }
-  </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+</script>
+<!-- Docsify v4 -->
+<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<script>
+
+    const gitalk = new Gitalk({
+        clientID: '8b82caa24b90f22f9055',
+        clientSecret: 'd8611cbb8f5797ba8448d18b70f868077cf1974b',
+        repo: 'robot-doc-gitalk',
+        owner: 'loveteemo',
+        admin: ['loveteemo'],
+        distractionFreeMode: false,
+        id: decodeURI(window.location.pathname),
+    });
+</script>
 </body>
 </html>
