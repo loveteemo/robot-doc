@@ -7,13 +7,14 @@
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="//unpkg.com/docsify-toc@1.0.0/dist/toc.css">
     <style>
         @media screen and (max-width: 767px) {
             .sidebar-toggle {
                 bottom: auto !important;
             }
         }
+
     </style>
 </head>
 <body>
@@ -36,6 +37,11 @@
             crossChapter: true,
             crossChapterText: true,
         },
+        toc: {
+            scope: '.markdown-section',
+            headings: 'h1, h2, h3, h4, h5, h6',
+            title: '目录',
+        },
     }
 </script>
 <!-- Docsify v4 -->
@@ -43,22 +49,8 @@
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-
+<script src="//unpkg.com/docsify-copy-code@2"></script>
+<script src="//unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-<script>
-
-    const gitalk = new Gitalk({
-        clientID: '8b82caa24b90f22f9055',
-        clientSecret: 'd8611cbb8f5797ba8448d18b70f868077cf1974b',
-        repo: 'robot-doc',
-        owner: 'loveteemo',
-        admin: ['loveteemo'],
-        distractionFreeMode: false,
-        id: decodeURI(window.location.pathname),
-    });
-</script>
 </body>
 </html>
